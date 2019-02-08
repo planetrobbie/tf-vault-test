@@ -2,7 +2,7 @@
  Vault cluster
 --------------------------------------------------------------*/
 module vault_cluster {
-  source        = "../terraform-aws-vault"
+  source        = "git@github.com:iainthegray/terraform-aws-vault.git"
   instance_type = "${var.instance_type}"
   ssh_key_name  = "${var.ssh_key_name}"
 
