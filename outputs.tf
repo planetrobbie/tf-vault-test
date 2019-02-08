@@ -56,7 +56,7 @@ output "elb_dns" {
 output "info" {
   value = <<END
 Bastion Connection: ssh -A ubuntu@${aws_instance.bastion.public_ip}
-final script: ./finalscript.sh --consul-ips ${join(",", module.vault_cluster.consul_cluster_instance_ips)} \
+final script: ./final_config.sh --consul-ips ${join(",", module.vault_cluster.consul_cluster_instance_ips)} \
   --vault-ips ${join(",", module.vault_cluster.vault_cluster_instance_ips)} \
   --kms-region ${var.global_region} \
   --kms-key [Find it in the resources]
